@@ -3,6 +3,7 @@ import { SummaryTable } from './components/SummaryTable';
 // import { Habit } from './components/Habit';
 
 import './styles/global.css';
+import './lib/dayjs';
 
 export function App() {
   return (
