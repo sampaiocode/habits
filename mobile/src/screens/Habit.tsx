@@ -19,7 +19,7 @@ export function Habit() {
   const dayAndMonth = parsedDate.format('DD/MM');
 
   return (
-    <View className="bg-background pt-16 flex-1">
+    <View className="bg-background pt-16 px-8 flex-1">
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ paddingBottom: 100 }}

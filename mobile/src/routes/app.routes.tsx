@@ -1,8 +1,8 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { Habit } from '../Screens/Habit';
-import { Home } from '../Screens/Home';
-import { New } from '../Screens/New';
+import { Habit } from '../screens/Habit';
+import { Home } from '../screens/Home';
+import { New } from '../screens/New';
 
 const { Navigator, Screen } = createNativeStackNavigator();
 
