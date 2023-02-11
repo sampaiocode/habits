@@ -26,7 +26,7 @@ export function HabitDay({
   const amountAccomplishedPercentage =
     amountOfHabits > 0 ? generateProgressPercentage(amountOfHabits, amountCompleted) : 0;
   const today = dayjs().startOf('day').toDate();
-  const isCurrentDay = dayjs().isSame(today);
+  const isCurrentDay = dayjs(date).isSame(today);
 
   return (
     <TouchableOpacity
