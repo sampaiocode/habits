@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Check } from 'phosphor-react';
 
 import { api } from '../lib/axios';
+import dayjs from 'dayjs';
 
 interface HabitsListProps {
   date: Date;
@@ -32,11 +33,18 @@ export function HabitsList({ date }: HabitsListProps) {
       });
   }, []);
 
+  const isDateInPost = dayjs(date).endOf('day').isBefore(new Date());
+
   return (
     <div className="mt-6 flex flex-col gap-3">
       {habitsInfo?.possibleHabits.map(habit => {
         return (
-          <Checkbox.Root key={habit.id} className="flex items-center gap-3 group">
+          <Checkbox.Root
+            key={habit.id}
+            checked={habitsInfo.completedHabits.includes(habit.id)}
+            disabled={isDateInPost}
+            className="flex items-center gap-3 group"
+          >
             <div className="bg-zinc-800 h-8 w-8 rounded-lg border-zinc-800 flex items-center justify-center group-data-[state=checked]:bg-green-500 group-data-[state=checked]:border-green-500">
               <Checkbox.Indicator>
                 <Check size={20} className="text-white" />
