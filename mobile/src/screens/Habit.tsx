@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import { Alert, ScrollView, Text, View } from 'react-native';
 import { useRoute } from '@react-navigation/native';
 
-import dayjs from 'dayjs';
+import { generateProgressPercentage } from '../utils/generate-progress-percentage';
 import { api } from '../lib/axios';
+import dayjs from 'dayjs';
 
 import { BackButton } from '../components/BackButton';
 import { ProgressBar } from '../components/ProgressBar';
@@ -33,6 +34,10 @@ export function Habit() {
   const parsedDate = dayjs(date);
   const dayOfWeek = parsedDate.format('dddd');
   const dayAndMonth = parsedDate.format('DD/MM');
+
+  const habitsProgress = dayInfo?.possibleHabits.length
+    ? generateProgressPercentage(dayInfo.possibleHabits.length, completedHabits.length)
+    : 0;
 
   async function fechtHabits() {
     try {
@@ -82,7 +87,7 @@ export function Habit() {
 
         <Text className="text-white font-extrabold text-3xl">{dayAndMonth}</Text>
 
-        <ProgressBar progress={70} />
+        <ProgressBar progress={habitsProgress} />
 
         <View className="mt-6">
           {dayInfo?.possibleHabits &&
