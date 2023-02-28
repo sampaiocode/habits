@@ -22,7 +22,7 @@ export function ProgressBar({ progress = 0 }: ProgressBarProps) {
 
   return (
     <View className="bg-zinc-700 w-full h-3 rounded-xl mt-4">
-      <Animated.View className="bg-violet-600 h-3 rounded-xl" style={style} />
+      <Animated.View className="bg-sky-600 h-3 rounded-xl" style={style} />
     </View>
   );
 }

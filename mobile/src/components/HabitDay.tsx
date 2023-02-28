@@ -33,15 +33,15 @@ export function HabitDay({
       {...rest}
       className={clsx('m-1 rounded-lg border-2', {
         ['bg-zinc-900 border-zinc-800']: amountAccomplishedPercentage === 0,
-        ['bg-violet-900 border-violet-700']:
+        ['bg-sky-900 border-sky-700']:
           amountAccomplishedPercentage > 0 && amountAccomplishedPercentage < 20,
-        ['bg-violet-800 border-violet-600']:
+        ['bg-sky-800 border-sky-600']:
           amountAccomplishedPercentage >= 20 && amountAccomplishedPercentage < 40,
-        ['bg-violet-700 border-violet-500']:
+        ['bg-sky-700 border-sky-500']:
           amountAccomplishedPercentage >= 40 && amountAccomplishedPercentage < 60,
-        ['bg-violet-600 border-violet-500']:
+        ['bg-sky-600 border-sky-500']:
           amountAccomplishedPercentage >= 60 && amountAccomplishedPercentage < 80,
-        ['bg-violet-500 border-violet-400']: amountAccomplishedPercentage >= 80,
+        ['bg-sky-500 border-sky-400']: amountAccomplishedPercentage >= 80,
         ['border-white border-4']: isCurrentDay
       })}
       style={{ width: DAY_SIZE, height: DAY_SIZE }}

@@ -57,7 +57,7 @@ export function NewHabitForm() {
         type="text"
         id="title"
         placeholder="Exercícios, dormir bem, e etc..."
-        className="text-white placeholder-zinc-400 bg-zinc-800 mt-3 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-700 focus:ring-offset-2 focus:ring-offset-zinc-900"
+        className="text-white placeholder-zinc-400 bg-zinc-800 mt-3 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-700 focus:ring-offset-2 focus:ring-offset-zinc-900"
         autoFocus
         value={title}
         onChange={event => setTitle(event.target.value)}
@@ -75,7 +75,7 @@ export function NewHabitForm() {
             checked={weekDays.includes(index)}
             onCheckedChange={() => handleToggleWeekDay(index)}
           >
-            <div className="bg-zinc-800 h-8 w-8 rounded-lg border-zinc-800 flex items-center justify-center group-data-[state=checked]:bg-green-500 group-data-[state=checked]:border-green-500 transition-colors group-focus-visible:ring-2 group-focus-visible:ring-violet-700 group-focus-visible:ring-offset-2 group-focus-visible:ring-offset-background">
+            <div className="bg-zinc-800 h-8 w-8 rounded-lg border-zinc-800 flex items-center justify-center group-data-[state=checked]:bg-green-500 group-data-[state=checked]:border-green-500 transition-colors group-focus-visible:ring-2 group-focus-visible:ring-sky-700 group-focus-visible:ring-offset-2 group-focus-visible:ring-offset-background">
               <Checkbox.Indicator>
                 <Check size={20} className="text-white" />
               </Checkbox.Indicator>
