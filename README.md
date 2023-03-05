@@ -30,7 +30,7 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 **Clone o projeto**
 
 ```bash
-git clone https://github.com/sampaiocode/ignews.git
+git clone https://github.com/sampaiocode/habits.git
 ```
 
 **Siga os passos abaixo**
